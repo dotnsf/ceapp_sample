@@ -5,7 +5,9 @@ var express = require( 'express' ),
 app.use( express.Router() );
 app.get( '/', function( req, res ){
   res.contentType( 'text/plain; charset=utf-8' );
-  res.write( ( new Date() ).toISOString() );
+  var str = ( new Date() ).toISOString();
+  console.log( str );
+  res.write( str );
   res.end();
 });
 
